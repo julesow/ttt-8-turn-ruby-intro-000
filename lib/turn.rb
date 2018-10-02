@@ -20,6 +20,7 @@ end
 
 #####®®®®®####
 
+
 # code your #valid_move? method here
 def valid_move?(board,index)
     if index.between?(0,8) && !position_taken?(board,index)
@@ -42,11 +43,11 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.chomp
   input_to_index(user_input)
- if valid_move?(board,user_input) == false
+ if valid_move?(board,input_to_index(user_input)) == false
    puts "Please enter 1-9:"
   user_input = gets.chomp
   else
-    move(board,user_input,player="X")
+    move(board,input_to_index(user_input),player="X")
     display_board(board)
 end
 end
