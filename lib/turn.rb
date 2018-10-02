@@ -49,5 +49,6 @@ def turn(board)
    puts "Please enter 1-9:"
   else
     move(board,input_to_index(user_input),player="X")
+    display_board(board)
 end
 end
