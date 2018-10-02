@@ -45,7 +45,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.chomp
- valid_move?(board,input_to_index(user_input)) == false
+ if valid_move?(board,input_to_index(user_input)) == false
    puts "Please enter 1-9:"
   else
     move(board,input_to_index(user_input),player="X")
